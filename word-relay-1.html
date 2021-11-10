@@ -1,0 +1,44 @@
+<!-- ~ 이벤트 리스너 달기 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>끝말잇기</title>
+</head>
+
+<body>
+    <div>
+        <span id='order'>1</span>번째 참가자
+    </div>
+    <div>제시어 :
+        <span id = "word">
+
+        </span>
+    </div>
+    <input type="text">
+    <button>입력</button>
+    <script>
+        const number = Number(prompt('몇 명이 참가하나요?'), 10); // 10진법을 사용
+
+        // alert(number);
+        // const yesOrNo = confirm('맞나요?');
+
+        document.querySelector('input').addEventListener('input', (event)=>{
+            console.log('글자 입력', event.target.value);
+        });
+
+        const onClick = () => {
+            console.log('버튼 클릭');
+        }
+
+        // onClick은 함수자리. onClick()으로 쓰면 return undefined가 생략되어있기 때문에
+        // onClick으로 써줘야 한다.
+        document.querySelector('button').addEventListener('click', onClick);
+        
+    </script>
+</body>
+
+</html>
