@@ -145,11 +145,17 @@
             break;
           case '*':
             $result.value = numOne * numTwo;
+            break;
           case '/':
             $result.value = numOne / numTwo;
           default:
             break;
         }
+        $operator.value = '';
+        numOne = $result.value;
+        operator = '';
+        numTwo = '';
+
       } else {
         alert('숫자를 먼저 입력하세요');
       }
@@ -165,5 +171,9 @@
       $result.value = '';
     });
 
+    if ($result.value){
+      $result.value
+    }
+  
   </script>
 </body>
